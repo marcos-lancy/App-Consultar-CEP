@@ -18,7 +18,10 @@ namespace ConsultarCEP.Servico
             WebClient wc = new WebClient();
             string conteudo = wc.DownloadString(novoEnderecoUrl);
 
-            return JsonConvert.DeserializeObject<Endereco>(conteudo);
+            var end = JsonConvert.DeserializeObject<Endereco>(conteudo);
+            if (end.Cep == null) return null;
+
+            return end;
         }
 
     }

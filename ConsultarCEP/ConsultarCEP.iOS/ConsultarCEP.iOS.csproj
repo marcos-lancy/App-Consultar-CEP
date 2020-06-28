@@ -133,4 +133,7 @@
       <Name>ConsultarCEP</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\imgCorreios.png" />
+  </ItemGroup>
 </Project>
